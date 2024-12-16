@@ -9,36 +9,30 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
 }
-
 a {
     text-decoration: none;
     color: var(--blue);
     transition: color 0.3s ease, background-color 0.3s ease;
 }
-
 a:hover {
     background-color: hsla(0deg, 0%, 0%, 0.1);
     color: var(--blue-strong);
 }
-
 pre {
     overflow: auto;
     padding: 1rem;
     background-color: #fafafa;
     border-radius: 4px;
 }
-
 img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
-
 iframe {
     border: none;
     border-radius: 8px;
 }
-
 #layout {
     max-width: 1600px;
     display: flex;
@@ -48,14 +42,12 @@ iframe {
     min-height: 95vh;
     padding: 1rem;
 }
-
 #main {
     background-color: #fff;
     padding: 3rem 4rem;
     border-radius: 8px;
     box-shadow: var(--shadow);
 }
-
 #title {
     text-align: center;
     font-size: 2.25rem;
@@ -64,7 +56,6 @@ iframe {
     letter-spacing: 0.02em;
     color: #333;
 }
-
 #content {
     font-size: 1rem;
     line-height: 1.75;
@@ -73,7 +64,6 @@ iframe {
     color: #555;
     font-feature-settings: "liga" 1, "dlig" 1;
 }
-
 #content h2, h3, h4 {
     color: #333;
     font-weight: 700;
@@ -81,7 +71,6 @@ iframe {
     letter-spacing: 0.02em;
     margin-top: 20px;
 }
-
 #content h2::before {
     content: '#';
     color: var(--blue);
@@ -89,31 +78,25 @@ iframe {
     left: 1rem;
     font-size: 1.25rem;
 }
-
 #content h2 {
     font-size: 1.5rem;
 }
-
 #content h3 {
     font-size: 1.25rem;
 }
-
 #content h4 {
     font-size: 1.125rem;
 }
-
 #content p {
     margin-block-start: 1.5rem;
     margin-block-end: 1.5rem;
     text-align: justify;
 }
-
 #content hr {
     border: 0;
     height: 1px;
     background-color: #ddd;
 }
-
 #content blockquote {
     margin: 1.5rem 0;
     padding: 1rem 2rem;
@@ -121,21 +104,17 @@ iframe {
     border-left: 5px solid var(--blue);
     font-style: italic;
 }
-
 #noteClippedFrom {
     color: var(--gray);
     font-style: italic;
 }
-
 .table {
     overflow-wrap: anywhere;
 }
-
 .pdf-view {
     width: 100%;
     min-height: 40rem;
 }
-
 .type-file > button {
     display: block;
     margin: 2rem auto;
@@ -149,15 +128,12 @@ iframe {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 .type-file > button:hover {
     background-color: var(--blue-strong);
 }
-
 .mermaid {
     text-align: center;
 }
-
 /* Menu 按钮样式 */
 #toggleMenuButton {
     position: fixed;
@@ -173,22 +149,18 @@ iframe {
     width: 100px;
     display: block;
 }
-
 /* Menu 按钮文字 */
 #toggleMenuButton::before {
     content: "Menu";
     color: var(--blue);
 }
-
 /* Menu 展开/收起状态的箭头指示器 */
 #layout.showMenu #toggleMenuButton::after {
     content: "«";  /* 展开状态显示左箭头 */
 }
-
 #toggleMenuButton::after {
     content: "»";  /* 收起状态显示右箭头 */
 }
-
 #menu {
     display: block;
     background-color: #fff;
@@ -202,34 +174,27 @@ iframe {
     width: fit-content;
     max-height: 75vh;
 }
-
 .showMenu #menu {
     display: block;
 }
-
 #menu strong {
     color: var(--blue-strong);
 }
-
 nav.grid ul {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
-
 nav.list {
     line-height: 1.6;
 }
-
 nav ul {
     list-style: none;
     padding: 0 1rem;
 }
-
 nav ul li {
     margin: 0.5rem 0;
 }
-
 nav ul li a {
     display: block;
     padding: 0.5rem 1rem;
@@ -237,22 +202,18 @@ nav ul li a {
     border-radius: 4px;
     transition: all 0.3s ease;
 }
-
 nav ul li a:hover {
     background-color: rgba(64, 158, 255, 0.1);
     color: var(--blue);
     transform: translateX(4px);
 }
-
 nav.grid ul li a {
     padding: 0;
     margin: 0;
 }
-
 nav.grid ul li a:hover {
     transform: none;
 }
-
 #parentLink {
     color: var(--gray);
     position: relative;
@@ -260,11 +221,9 @@ nav.grid ul li a:hover {
     top: -1rem;
     display:none;
 }
-
 #parentLink::before {
     content: "@";
 }
-
 /* 大屏幕布局 (>= 60rem) */
 @media screen and (min-width: 60rem) {
     #main {
@@ -276,13 +235,11 @@ nav.grid ul li a:hover {
     #toggleMenuButton {
         display: none;
     }
-
-   /* 大屏幕下禁用遮罩层 */
+       /* 大屏幕下禁用遮罩层 */
     .showMenu::before {
         display: none;
     }
 }
-
 
 @media screen and (max-width: 48rem) {
     #main {
@@ -294,7 +251,6 @@ nav.grid ul li a:hover {
         display: block;
     }
 }
-
 /* 遮罩层样式移到公共区域 */
 .showMenu::before {
     content: '';
@@ -306,26 +262,22 @@ nav.grid ul li a:hover {
     background: rgba(0, 0, 0, 0.3);
     z-index: 998;
 }
-
 .showMenu #menu {
     transform: translateX(0);
     margin-top: 3rem !important;
 }
-
 /* 小屏幕布局 (<= 60rem) */
 @media screen and (max-width: 60rem) {
     #layout {
         padding: 0.5rem;
         gap: 1rem;
     }
-
-    #main {
+        #main {
         width: 100%;
         padding: 1.5rem;
         margin-top: 2.5rem;
     }
-
-    #toggleMenuButton {
+        #toggleMenuButton {
         right: 1rem;
         bottom: 1rem;
         padding: 0.3rem 1rem;
@@ -334,8 +286,7 @@ nav.grid ul li a:hover {
         height: 30px;
         width: 100px;
     }
-
-    /* 小屏幕菜单样式 */
+        /* 小屏幕菜单样式 */
     #menu {
         position: fixed;
         top: 0;
@@ -347,13 +298,11 @@ nav.grid ul li a:hover {
         background: rgba(255, 255, 255, 0.98);
         padding: 1rem;
     }
-
-    /* 菜单展开状态 */
+        /* 菜单展开状态 */
     .showMenu #menu {
         transform: translateX(0);  /* 显示菜单 */
     }
-
-    /* 添加遮罩层 */
+        /* 添加遮罩层 */
     .showMenu::before {
         content: '';
         position: fixed;
@@ -364,76 +313,61 @@ nav.grid ul li a:hover {
         background: rgba(0, 0, 0, 0.3);
         z-index: 998;
     }
-
-    #title {
+        #title {
         font-size: 1.75rem;
         margin-bottom: 1rem;
     }
-
-    #content {
+        #content {
         font-size: 0.95rem;
     }
-
-    #content h2 {
+        #content h2 {
         font-size: 1.3rem;
     }
-
-    #content h3 {
+        #content h3 {
         font-size: 1.15rem;
     }
-
-    #content h4 {
+        #content h4 {
         font-size: 1rem;
     }
 }
-
 
 @media screen and (max-width: 32rem) {
     #main {
         padding: 1rem;
     }
-
-    #content h2::before {
+        #content h2::before {
         left: 0.5rem;
     }
-
-    #parentLink {
+        #parentLink {
         left: 0;
     }
-
-    pre {
+        pre {
         padding: 0.75rem;
         font-size: 0.9rem;
     }
-
-    .table {
+        .table {
         font-size: 0.9rem;
         overflow-x: auto;
     }
 }
-
 :root {
     --shadow: 0px 24px 32px rgba(0, 0, 0, 0.08), 0px 16px 24px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.12), 0px 0px 1px rgba(0, 0, 0, 0.15);
     --blue: #409EFF;
     --blue-strong: #307bc7;
     --gray: #888;
 }
-
 /* 优化滚动条样式 */
 #menu::-webkit-scrollbar {
     width: 6px;
 }
-
 #menu::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 3px;
 }
-
 #menu::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 3px;
 }
-
 #menu::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
